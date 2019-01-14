@@ -1,0 +1,28 @@
+{
+  "name": "Ironhack Extension",
+  "version": "1.0",
+  "description": "This extension is used to improve students experience during the bootcamp",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/logo.png"
+    }
+  },
+  "icons": {
+    "128": "images/logo.png"
+  },
+  "content_scripts": [ {
+    "matches": ["https://trello.com/*"],
+    "js": ["scripts.js"]
+  } ],
+  "manifest_version": 2
+}
